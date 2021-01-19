@@ -12,7 +12,7 @@ public class Main
     frame1.setSize(500, 500);
     frame1.setVisible(true);
 
-    // ------------ Panel to hold the buttons --------------
+    // ------------ Panel 1 to hold the buttons --------------
     JPanel panel1 = new JPanel(new GridLayout(2, 2, 20, 20));
 
     // --------------------- Button 1 ---------------------
@@ -38,11 +38,23 @@ public class Main
 
     // ------------------- Label 1 ---------------------
     JLabel label1 = new JLabel("Count the ducks");
+    JTextField textfield1 = new JTextField(10);
 
     panel1.add(button1);
     panel1.add(button2);
     panel1.add(label1);
+    panel1.add(textfield1);
 
-    frame1.getContentPane().add(panel1);
+    // ------------------ Panel 2 --------------------
+    JPanel panel2 = new JPanel (new BorderLayout(10, 10));
+
+    // ------------ Image 1 - the DUCK ----------------
+    ImageIcon duckImg = new ImageIcon("bigduck.jpg", "A big duck in water");
+    JLabel duckLabelPic = new JLabel(duckImg);
+
+    panel2.add(duckLabelPic);
+
+    frame1.getContentPane().add(BorderLayout.NORTH, panel1);
+    frame1.getContentPane().add(BorderLayout.CENTER, panel2);
   } // end main method
 } // end class Main
