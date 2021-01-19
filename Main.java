@@ -1,5 +1,6 @@
 import javax.swing.*;
 import java.awt.event.*; // this enables the events
+import java.awt.*;
 
 public class Main
 {
@@ -9,6 +10,10 @@ public class Main
     frame1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     // YOU MUST HAVE THIS LINE
     frame1.setSize(500, 500);
+    frame1.setVisible(true);
+
+    // ------------ Panel to hold the buttons --------------
+    JPanel panel1 = new JPanel(new GridLayout(2, 2, 20, 20));
 
     // --------------------- Button 1 ---------------------
     JButton button1 = new JButton("Click me!");
@@ -31,9 +36,9 @@ public class Main
       }
     });
 
-    frame1.add(button1);
-    frame1.add(button2);
+    panel1.add(button1);
+    panel1.add(button2);
 
-    frame1.setVisible(true);
+    frame1.getContentPane().add(panel1);
   } // end main method
 } // end class Main
