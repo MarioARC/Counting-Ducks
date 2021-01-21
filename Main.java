@@ -33,12 +33,13 @@ public class Main
     }); // end the ActionListner
 
     // -------------------- Button 2 --------------------
-    JButton button2 = new JButton("No, click me");
+    JButton button2 = new JButton("Get some Text");
     button2.addActionListener(new ActionListener()
     {
       public void actionPerformed(ActionEvent e)
       {
-        System.out.println("Thanks, pal!");
+        System.out.println(textfield1.getText());
+        textfield1.setText("");
       }
     });
 
